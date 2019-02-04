@@ -17,6 +17,9 @@ footer {
   bottom: 1em;
   left: 1em;
 }
+input {
+  width: 100%;
+}
 footer a {
   color: #f80;
 }
