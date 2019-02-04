@@ -11,7 +11,9 @@
     <title>iVAC</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	console.log("JQuery OK");
 	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	
 	<script type="text/javascript">
 
 		var accessToken = "fb91d8987c274d568c656e7f4c71e000";
@@ -33,7 +35,8 @@
 		var recognition;
 
 		function startRecognition() {
-			recognition = new webkitSpeechRecognition();
+			recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||
+      window.msSpeechRecognition)();
 			recognition.onstart = function(event) {
 				updateRec();
 			};
