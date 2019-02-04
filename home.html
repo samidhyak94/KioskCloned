@@ -1,0 +1,145 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes" > 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="G.I Labs">
+    <meta name="author" content="GIL">
+
+    <title>iVAC</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+	<script type="text/javascript">
+
+		var accessToken = "fb91d8987c274d568c656e7f4c71e000";
+		var baseUrl = "https://api.dialogflow.com/v1/";
+
+		$(document).ready(function() {
+			$("#input").keypress(function(event) {
+				if (event.which == 13) {
+					event.preventDefault();
+					send();
+					this.value = '';
+				}
+			});
+			$("#rec").click(function(event) {
+				switchRecognition();
+			});
+		});
+
+		var recognition;
+
+		function startRecognition() {
+			recognition = new webkitSpeechRecognition();
+			recognition.onstart = function(event) {
+				updateRec();
+			};
+			recognition.onresult = function(event) {
+				var text = "";
+			    for (var i = event.resultIndex; i < event.results.length; ++i) {
+			    	text += event.results[i][0].transcript;
+			    }
+			    setInput(text);
+				stopRecognition();
+			};
+			recognition.onend = function() {
+				stopRecognition();
+			};
+			recognition.lang = "en-US";
+			recognition.start();
+		}
+	
+		function stopRecognition() {
+			if (recognition) {
+				recognition.stop();
+				recognition = null;
+			}
+			updateRec();
+		}
+
+		function switchRecognition() {
+			if (recognition) {
+				stopRecognition();
+			} else {
+				startRecognition();
+			}
+		}
+
+		function setInput(text) {
+			$("#input").val(text);
+			send();
+		}
+
+		function updateRec() {
+			$("#rec").text(recognition ? "Stop" : "Speak");
+		}
+
+		function send() {
+		//	var conversation = [];
+           
+            var text = $("#input").val();
+            conversation.push("Me: " + text + '\r\n');
+			$.ajax({
+				type: "POST",
+				url: baseUrl + "query?v=20150910",
+				contentType: "application/json; charset=utf-8",
+				dataType: "json",
+				headers: {
+					"Authorization": "Bearer " + accessToken
+				},
+				data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
+
+				success: function(data) 
+                {
+				  var respText = data.result.fulfillment.speech;
+                  console.log("Respuesta: " + respText);
+                  setResponse(respText);
+				  responsiveVoice.speak(respText,"Hindi Female");
+                  $("#response").scrollTop($("#response").height());
+				},
+				error: function() {
+					setResponse("Internal Server Error");
+				}
+			});
+			//setResponse("Thinking...");
+		}
+
+		function setResponse(val) {
+            conversation.push("AI: " + val + '\r\n');
+			$("#response").text(conversation.join(""));
+		}
+    var conversation = [];
+	</script>
+	
+</head>
+<body>
+    <section>
+     <div>
+       <!-- <img src="images/SNULOGO.png" class="topleft" alt="Sister Nivedita University"> -->
+        <img src="images/GILabs_logo.png" alt="G.I Labs" class="topright">
+      </div>
+   <!--   <h1>SNU AI VOICEBOT</h1>
+      <h2>Developed by G.I Labs India</h2>
+      -->
+    <div class="col-sm-6 mb-small">
+     <img class="img-responsive imgg" src="images/ai-sub.png" align="left" alt="Artificial Intelligence Chat Bot" title="Artificial Intelligence Chat Bot">
+    </div>
+ 
+      <div>
+		<input id="input" type="text"> <button id="rec"><i class="fa fa-microphone"></i></button>
+		<br>
+	</div>
+     <div id="">
+          <p>Response</p>
+          <textarea id="response" cols="60" rows="20"></textarea>
+      </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
