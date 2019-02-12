@@ -1,39 +1,30 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+
 html {
   height: 100%;
 }
 body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
   padding: 0;
   margin: 0;
   background-size: 100%;
-  background-color: #E72F2F;
   background-position: center;
 }
-footer {
-  font-size: 0.75em;
-  color: silver;
-  position: fixed;
-  bottom: 1em;
-  left: 1em;
-}
-input {
-  width: 100%;
-}
-footer a {
-  color: #f80;
-}
+
 header {
   margin: 2em 0;
   text-align: center;
 }
 h1, h2, h3 {
   margin: 0;
-  color:#ffff;
   text-rendering: optimizeLegibility;
   text-align: center;
 }
 h1 {
+  color: #FFFFFF;
   font-weight: 400;
   font-size: 3em;
 }
@@ -45,28 +36,7 @@ section {
   margin: 1.5em auto;
   width: 400px;
 }
-button {
-  display: block;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  width: 70px;
-  height: 70px;
-  border: 0;
-  border-radius: 50%;
-  padding: .7em 1em;
-  margin: 4em auto 3em;
-  text-align: center;
-  color: #ffff;
-  background: linear-gradient(180deg, #FF0000 0%, #891919 50%, #310000 100%);
-  box-shadow: 2px 8px 40px rgba(63, 200, 201, .4);
-
-  will-change: transform, filter;
-  transition: all 0.3s ease-out;
-}
-.imgg {
-  width: 500px;
-  height: 300px;
-}
+/*
 #convo {
   height: 300px;
   width: 500px;
@@ -75,21 +45,8 @@ button {
   color: white;
   font-size: 20px;
 }
-button .fa {
-  font-size: 60px;
-  line-height: 90px;
-  margin: 0;
-  text-shadow: 2px 3px 3px #1C2833;
-}
-button:hover {
-  transform: scale(.90);
-}
-button:active {
-  filter: brightness(.8);
-}
-button:focus {
-  outline: 0;
-}
+*/
+
 .topleft {
     position: absolute;
     top: 8px;
@@ -115,6 +72,7 @@ button:focus {
   background-position:center;
   background-attachment: fixed;
 }
+/*
 .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -124,6 +82,11 @@ button:focus {
   -moz-osx-font-smoothing: grayscale;
   margin-left: 10px;
 }
+*/
 .fa-github::before {
     content: "\f09b";
 }
+
+/*CSS for chatbot */
+{box-sizing: border-box;}
+
