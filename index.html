@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes" > 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,137 +9,296 @@
     <meta name="author" content="GIL">
 
     <title>iVAC</title>
-	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-	
-	<script type="text/javascript">
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+    
+    <script type="text/javascript">
 
-		var accessToken = "fb91d8987c274d568c656e7f4c71e000";
-		var baseUrl = "https://api.dialogflow.com/v1/";
+    var accessToken = "fb91d8987c274d568c656e7f4c71e000";
+    var baseUrl = "https://api.dialogflow.com/v1/";
 
-		$(document).ready(function() {
-			$("#input").keypress(function(event) {
-				if (event.which == 13) {
-					event.preventDefault();
-					send();
-					this.value = '';
-				}
-			});
-			$("#rec").click(function(event) {
-				switchRecognition();
-			});
-		});
+    $(document).ready(function() {
+      $("#input").keypress(function(event) {
+        if (event.which == 13) {
+          event.preventDefault();
+          send();
+          this.value = '';
+        }
+      });
+      $("#rec").click(function(event) {
+        switchRecognition();
+      });
+    });
 
-		var recognition;
+    var recognition;
 
-		function startRecognition() {
-			recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||
+    function startRecognition() {
+      recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||
       window.msSpeechRecognition)();
-			recognition.onstart = function(event) {
-				updateRec();
-			};
-			recognition.onresult = function(event) {
-				var text = "";
-			    for (var i = event.resultIndex; i < event.results.length; ++i) {
-			    	text += event.results[i][0].transcript;
-			    }
-			    setInput(text);
-				stopRecognition();
-			};
-			recognition.onend = function() {
-				stopRecognition();
-			};
-			recognition.lang = "en-US";
-			recognition.start();
-		}
-	
-		function stopRecognition() {
-			if (recognition) {
-				recognition.stop();
-				recognition = null;
-			}
-			updateRec();
-		}
+      recognition.onstart = function(event) {
+        updateRec();
+      };
+      recognition.onresult = function(event) {
+        var text = "";
+          for (var i = event.resultIndex; i < event.results.length; ++i) {
+            text += event.results[i][0].transcript;
+          }
+          setInput(text);
+        stopRecognition();
+      };
+      recognition.onend = function() {
+        stopRecognition();
+      };
+      recognition.lang = "en-US";
+      recognition.start();
+    }
+  
+    function stopRecognition() {
+      if (recognition) {
+        recognition.stop();
+        recognition = null;
+      }
+      updateRec();
+    }
 
-		function switchRecognition() {
-			if (recognition) {
-				stopRecognition();
-			} else {
-				startRecognition();
-			}
-		}
+    function switchRecognition() {
+      if (recognition) {
+        stopRecognition();
+      } else {
+        startRecognition();
+      }
+    }
 
-		function setInput(text) {
-			$("#input").val(text);
-			send();
-		}
+    function setInput(text) {
+      $("#input").val(text);
+      send();
+    }
 
-		function updateRec() {
-			$("#rec").text(recognition ? "Stop" : "Speak");
-		}
+    function updateRec() {
+      $("#rec").text(recognition ? "Stop" : "Speak");
+    }
 
-		function send() {
-		//	var conversation = [];
+    function send() {
+    //  var conversation = [];
            
             var text = $("#input").val();
             conversation.push("Me: " + text + '\r\n');
-			$.ajax({
-				type: "POST",
-				url: baseUrl + "query?v=20150910",
-				contentType: "application/json; charset=utf-8",
-				dataType: "json",
-				headers: {
-					"Authorization": "Bearer " + accessToken
-				},
-				data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
+      $.ajax({
+        type: "POST",
+        url: baseUrl + "query?v=20150910",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        headers: {
+          "Authorization": "Bearer " + accessToken
+        },
+        data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
 
-				success: function(data) 
+        success: function(data) 
                 {
-				  var respText = data.result.fulfillment.speech;
+          var respText = data.result.fulfillment.speech;
                   console.log("Respuesta: " + respText);
                   setResponse(respText);
-				  responsiveVoice.speak(respText,"Hindi Female");
+          responsiveVoice.speak(respText,"Hindi Female");
                   $("#response").scrollTop($("#response").height());
-				},
-				error: function() {
-					setResponse("Internal Server Error");
-				}
-			});
-			//setResponse("Thinking...");
-		}
+        },
+        error: function() {
+          setResponse("Internal Server Error");
+        }
+      });
+      //setResponse("Thinking...");
+    }
 
-		function setResponse(val) {
+    function setResponse(val) {
             conversation.push("AI: " + val + '\r\n');
-			$("#response").text(conversation.join(""));
-		}
+      $("#response").text(conversation.join(""));
+    }
     var conversation = [];
-	</script>
-	
+  </script>
+  <style>
+
+  /*For top left icon*/
+  .topleft {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 20px;
+    width: 180px;
+    height: 80px;
+  }
+  /* For top right button*/
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    font-size: 20px;
+    width: 180px;
+    height: 80px;
+  text-align: right;
+}
+  /* Button used to open the chat form - fixed at the bottom of the page */
+  .open-button {
+  display: block;
+  position: fixed;
+  bottom: 14px;
+  right: 20px;
+  -webkit-appearance: button;
+  -moz-appearance: button;  
+ border-radius: 12px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.open-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.open-button span: after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 30px;
+}
+
+.button:hover span:after {
+  opacity: 2;
+  right: 0;
+}
+
+.imgg {
+  width: 500px;
+  height: 300px;
+}
+
+button .fa {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: right;
+  margin: 0;
+}
+button:hover {
+  transform: scale(.90);
+}
+button:active {
+  filter: brightness(.8);
+}
+button:focus {
+  outline: 0;
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  top: 40;
+  right: 15px;
+  border: 3px solid #1c0606;
+  z-index: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  background-image: url("images/SoftBlack.png");
+  max-width: 400px;
+  height: 600px;
+  padding: 10px;
+  background-color: #EAE2E2;
+}
+/*Inpur area*/
+.input {
+  width: 80%;
+  height: 30px;
+  border-radius: 12px;
+  margin: 3px;
+  border-bottom: 4px;
+}
+/* Full-width textarea */
+textarea {
+
+  width: 100%;
+  padding: 20px;
+  margin: 5px 1 12px 1;
+  background:  #eff5f5;
+  resize: none;
+  height: 400px;
+} 
+
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  position: fixed;
+  bottom: 6px;
+  right: 120px;
+  width: 200px;
+  border: 3px;
+  border-radius: 12px;
+}
+/* Add a red background color to the cancel button */
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+  </style>
 </head>
 <body>
-    <section>
-     <div>
-        <img class="topleft" src="images/ai-sub.png" align="left" alt="Artificial Intelligence Chat Bot" title="Artificial Intelligence Chat Bot"> 
-        <img src="images/GILabs_logo.png" alt="G.I Labs" class="topright">
-      </div>
-   <!--   <h1>SNU AI VOICEBOT</h1>
-      <h2>Developed by G.I Labs India</h2>
-      -->
-    <div class="col-sm-6 mb-small">
-    </div>
-    <div>
-	<button id="rec"><i class="fa fa-microphone"></i></button>
-	<input id="input" type="text" placeholder="Type here or use the button for voice"> 
-    </div>
-     <div id="">
-          <p>Response</p>
-          <textarea id="response" cols="80" rows="20"></textarea>
-      </div>
-    </section>
+<section>
+  <div>
+    <img src="images/GILabs_logo.png" alt="G.I Labs" class="topleft">
+  </div>
+  
+  <button class="open-button" onclick="openForm()"><b>Chat</b></button>
 
-   
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-    <script src="js/script.js"></script>
-  </body>
+  <div class="chat-popup" id="myForm">
+    
+    <div class="form-container">
+      <h1><em>Chat</em></h1>
+      <textarea id="response"></textarea>
+      <label for="msg"><input id="input" class="input" placeholder="Type message.." type="text"></label>
+      <button id="rec"><i class="fa fa-microphone">Talk</i></button>
+      
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </div>
+  </div>
+</section>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+</body>
 </html>
