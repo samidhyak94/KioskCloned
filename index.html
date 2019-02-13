@@ -14,10 +14,8 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     
     <script type="text/javascript">
-
     var accessToken = "fb91d8987c274d568c656e7f4c71e000";
     var baseUrl = "https://api.dialogflow.com/v1/";
-
     $(document).ready(function() {
       $("#input").keypress(function(event) {
         if (event.which == 13) {
@@ -30,9 +28,7 @@
         switchRecognition();
       });
     });
-
     var recognition;
-
     function startRecognition() {
       recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition ||
       window.msSpeechRecognition)();
@@ -61,7 +57,6 @@
       }
       updateRec();
     }
-
     function switchRecognition() {
       if (recognition) {
         stopRecognition();
@@ -69,16 +64,13 @@
         startRecognition();
       }
     }
-
     function setInput(text) {
       $("#input").val(text);
       send();
     }
-
     function updateRec() {
       $("#rec").text(recognition ? "Stop" : "Speak");
     }
-
     function send() {
     //  var conversation = [];
            
@@ -93,7 +85,6 @@
           "Authorization": "Bearer " + accessToken
         },
         data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
-
         success: function(data) 
                 {
           var respText = data.result.fulfillment.speech;
@@ -108,7 +99,6 @@
       });
       //setResponse("Thinking...");
     }
-
     function setResponse(val) {
             conversation.push("AI: " + val + '\r\n');
       $("#response").text(conversation.join(""));
@@ -116,159 +106,14 @@
     var conversation = [];
   </script>
   <style>
-
-  /*For top left icon*/
-  .topleft {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 20px;
-    width: 180px;
-    height: 80px;
-  }
-  /* For top right button*/
-.topright {
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    font-size: 20px;
-    width: 180px;
-    height: 80px;
-  text-align: right;
-}
-  /* Button used to open the chat form - fixed at the bottom of the page */
-  .open-button {
-  display: block;
-  position: fixed;
-  bottom: 14px;
-  right: 20px;
-  -webkit-appearance: button;
-  -moz-appearance: button;  
- border-radius: 12px;
-  background-color: #f4511e;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 18px;
-  padding: 20px;
-  width: 150px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.open-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.open-button span: after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 30px;
-}
-
-.button:hover span:after {
-  opacity: 2;
-  right: 0;
-}
-
-.imgg {
-  width: 500px;
-  height: 300px;
-}
-
-button .fa {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 40px;
-  font-size: 20px;
-  line-height: 20px;
-  text-align: right;
-  margin: 0;
-}
-button:hover {
-  transform: scale(.90);
-}
-button:active {
-  filter: brightness(.8);
-}
-button:focus {
-  outline: 0;
-}
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  top: 40;
-  right: 15px;
-  border: 3px solid #1c0606;
-  z-index: 1;
-}
-
-/* Add styles to the form container */
-.form-container {
-  background-image: url("images/SoftBlack.png");
-  max-width: 400px;
-  height: 600px;
-  padding: 10px;
-  background-color: #EAE2E2;
-}
-/*Inpur area*/
-.input {
-  width: 80%;
-  height: 30px;
-  border-radius: 12px;
-  margin: 3px;
-  border-bottom: 4px;
-}
-/* Full-width textarea */
-textarea {
-
-  width: 100%;
-  padding: 20px;
-  margin: 5px 1 12px 1;
-  background:  #eff5f5;
-  resize: none;
-  height: 400px;
-} 
-
-
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: 3px;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
-.form-container .cancel {
-  position: fixed;
-  bottom: 6px;
-  right: 120px;
-  width: 200px;
-  border: 3px;
-  border-radius: 12px;
-}
-/* Add a red background color to the cancel button */
-
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
+    .form-container {
+      background-image: url("images/SoftBlack.png");
+      max-width: 400px;
+      height: 600px;
+      padding: 10px;
+      background-color: #EAE2E2;
+    }
+    
   </style>
 </head>
 <body>
@@ -295,7 +140,6 @@ textarea {
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
-
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
