@@ -128,6 +128,38 @@
     }
     
   </style>
+ <script type="text/javascript">
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    (function(d, m){
+      var kommunicateSettings = {"appId":"16c3efad7b70ff3519d6431f6865e7e50","conversationTitle":"GILabs ","onInit": function() {
+        var iframeStyle = document.createElement('style');
+                    var classSettings = ".change-kommunicate-iframe-height{height:70px!important;width:70px!important;}";
+                    iframeStyle.type = 'text/css';
+                    iframeStyle.innerHTML = classSettings;
+                    document.getElementsByTagName('head')[0].appendChild(iframeStyle);
+
+                    var launcherIconStyle = ".mck-sidebox-launcher,.km-chat-icon-sidebox{height: 100%;width: 100%;box-shadow: none;border-radius: 10px;}#launcher-svg-container {background: #FFD700!important;}.km-custom-launcher-image-ifr{height:89%!important;}.mck-sidebox-launcher{right:0!important;bottom:0!important;}";
+                    Kommunicate.customizeWidgetCss(launcherIconStyle);
+
+                    var addClassToIframe = parent.document.getElementById("kommunicate-widget-iframe");
+                    addClassToIframe.classList.add("change-kommunicate-iframe-height");  
+
+                    KommunicateGlobal.document.getElementById('mck-sidebox-launcher').addEventListener('click',function(){
+                    var iframeClick = parent.document.getElementById("kommunicate-widget-iframe");
+                    iframeClick.classList.remove("change-kommunicate-iframe-height");
+                    });
+
+                    KommunicateGlobal.document.getElementById('km-chat-widget-close-button').addEventListener('click',function(){
+                    var closeButtonClick = parent.document.getElementById("kommunicate-widget-iframe");
+                    closeButtonClick.classList.add("change-kommunicate-iframe-height");
+                    });
+      }};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://api.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+</script>
 </head>
 <body>
 <section>
