@@ -84,18 +84,18 @@
             console.log("++ValueofText==>"+text); 
             conversation.push("Me: " + text + '\r\n');
       $.ajax({
-        console.log('++insideAjaxCode');   
+           
         type: "POST",
-        console.log("++lineBefore_baseUrl");   
+           
         url: baseUrl + "query?v=20150910",
-        console.log("++lineAfter_baseUrl");  
+      //  console.log("++lineAfter_baseUrl");  
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        console.log("++lineBefore_headers");  
+     //   console.log("++lineBefore_headers");  
         headers: {
-          console.log("++lineBefore_Authorization"); 
+      //    console.log("++lineBefore_Authorization"); 
           "Authorization": "Bearer " + accessToken
-          console.log("++Authorization_Done"); 
+     //     console.log("++Authorization_Done"); 
         },
         data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
         success: function(data) 
