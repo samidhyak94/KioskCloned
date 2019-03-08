@@ -84,7 +84,7 @@
             console.log("++ValueofText==>"+text); 
             conversation.push("Me: " + text + '\r\n');
       $.ajax({
-        console.log("++insideAjaxCode");   
+        console.log('++insideAjaxCode');   
         type: "POST",
         console.log("++lineBefore_baseUrl");   
         url: baseUrl + "query?v=20150910",
