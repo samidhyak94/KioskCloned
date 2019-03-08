@@ -172,7 +172,7 @@ textarea {
 .form-container .cancel {
   position: fixed;
   bottom: 6px;
-  right: 120px;
+  left: 120px;
   width: 200px;
   border: 3px;
   border-radius: 12px;
