@@ -73,7 +73,7 @@ section {
   display: block;
   position: fixed;
   bottom: 14px;
-  left: 20px;
+  right: 20px;
   -webkit-appearance: button;
   -moz-appearance: button;  
  border-radius: 12px;
