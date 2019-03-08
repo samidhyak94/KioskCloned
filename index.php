@@ -87,7 +87,7 @@
            
         type: "POST",
            
-        url: baseUrl + "query?v=20170712",
+        url: baseUrl + "query?v=20150910",
       //  console.log("++lineAfter_baseUrl");  
         contentType: "application/json; charset=utf-8",
         dataType: "json",
