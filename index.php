@@ -87,7 +87,7 @@
            
         type: "POST",
            
-        url: baseUrl + "query?v=20150910",
+        url: baseUrl + "query?v=20170712",
       //  console.log("++lineAfter_baseUrl");  
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -132,7 +132,8 @@
       background-color: #EAE2E2;
     }   
   </style>
- <script type="text/javascript">
+
+    <script type="text/javascript">
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
     (function(d, m){
       var kommunicateSettings = {"appId":"16c3efad7b70ff3519d6431f6865e7e50","conversationTitle":"GILabs ","onInit": function() {
@@ -163,7 +164,7 @@
       var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
       window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
-</script>
+</script> 
 </head>
 <body>
 <section>
