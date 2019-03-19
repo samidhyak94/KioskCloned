@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1ddced;
+
+}
+
+
+.open-button {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  -webkit-appearance: button;
+  -moz-appearance: button;  
+ border-radius: 12px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.chatbox {
+  display: block;
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  width: 500px;
+  min-width: 390px;
+  height: 600px;
+  background: #fff;
+  padding: 25px;
+  margin: 20px auto;
+ box-shadow: 0 4px #ccc;
+  
+}
+
+.response {
+  padding: 5px;
+  width: 100%;
+  height: 450px;
+  background: #eee;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.response::-webkit-scrollbar {
+  width: 10px;
+}
+
+.response::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+background: rgba(0,0,0,.1);
+}
+.chat {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat .user-photo {
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chat .user-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.chat .chat-message {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 10px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.bot  {
+  background: #1adda4;
+}
+
+.human {
+ background: #1ddced;
+ order: -1; 
+}
+.chat-form {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.chat-form textarea {
+  background: #fbfbfb;
+  width: 80%;
+  height: 40px;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  resize: none;
+  padding: 5px;
+  font-size: 15px;
+  color: #333;
+
+}
+
+.chat-form textarea:focus {
+  background: #F0F2FF;
+}
+
+.chat-form textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat-form textarea::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+background: rgba(0,0,0,.1);
+}
+
+
+.chat-form button {
+  background: #415EF5;
+  padding: 5px 15px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  margin: 0 10px;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0px #0A394E;
+  cursor: pointer;
+  
+  -webkit-transition: background .2s easy;
+  -moz-transition: background .2s easy;
+  -o-transition: background .2s easy;
+
+}
+
+.chat-form button:hover {
+  background: #13c8d9;
+}
+.chatbox .cancel {
+  width: 100%;
+  height: 30px;
+  margin: 15px 0 0 0;
+  box-shadow: 0 3px 3px 0px #0A394E;
+}
