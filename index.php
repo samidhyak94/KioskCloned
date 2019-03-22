@@ -22,8 +22,10 @@
   <div>
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
   </div>
-    <h1 class="quote"></h1>
-  <button class="open-button" onclick="openForm()">Have any query? <b>Ask AI Bot</b></button>
+  <div>
+    <h1 class="quote">Welcome to the world of AI</h1>
+  <div>
+    <button class="open-button" onclick="openForm()">Have any query? <b>Ask AI Bot</b></button>
 
   <div class="chat-popup" id="myForm">
     
