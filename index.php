@@ -23,15 +23,15 @@
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
     </div>
     <h1 class="quote"></h1>
-    <button class="open-button" onclick="openForm()">Have any query? <b>Ask AI Bot</b></button>
+    <button class="open-button" onclick="openForm()">Have any query? <b>Ask iVAC Bot!</b></button>
 
   <div class="chat-popup" id="myForm">
     
     <div class="form-container">
       <h1>AI CHATBOT</h1>
       <div id="response" class="response"></div>
-      <input id="input" class="input" placeholder="Type message.." type="text">
-      <button id="rec"><b class="fa fa-microphone">Voice</b></button>
+      <input id="input" class="input" placeholder="Type here..." type="text">
+      <button id="rec"><b class="fa fa-microphone">Speak</b></button>
       
       <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
     </div>
