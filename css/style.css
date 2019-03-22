@@ -48,11 +48,10 @@ section {
   .topleft {
     position: absolute;
     top: 8px;
-    left: 1px;
+    left: 16px;
     font-size: 20px;
     width: 180px;
     height: 80px;
-    float : left;
   }
 .topright {
     position: absolute;
