@@ -15,23 +15,25 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
    
     <script type="text/javascript" src="js/conversation.js"></script>
-    
+
+
 </head>
 <body>
 <section>
   <div>
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
-    </div>
-    <div id="quote">
-      <p></p>
-      </div> 
-    <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
-    <div class="chat-popup" id="myForm">
+  </div>
+    <h1 class="quote"></h1>
+  <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
+
+  <div class="chat-popup" id="myForm">
+    
     <div class="form-container">
       <h1>AI CHATBOT</h1>
-     <div id="response" class="response"></div>
-      <input id="input" class="input" placeholder="Type here..." type="text">
+      <div id="response" class="response"></div>
+      <input id="input" class="input" placeholder="Type message.." type="text">
       <button id="rec"><b class="fa fa-microphone">Voice</b></button>
+      
       <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
     </div>
   </div>
