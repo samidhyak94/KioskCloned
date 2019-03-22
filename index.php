@@ -24,7 +24,7 @@
     </div>
     <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
      <div id="quote">
-      <p> Welcome to the world of AI </p>
+      <p></p>
       </div> 
     <div class="chat-popup" id="myForm">
     <div class="form-container">
