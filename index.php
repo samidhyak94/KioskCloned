@@ -22,10 +22,10 @@
   <div>
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
     </div>
-    <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
-     <div id="quote">
+    <div id="quote">
       <p></p>
       </div> 
+    <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
     <div class="chat-popup" id="myForm">
     <div class="form-container">
       <h1>AI CHATBOT</h1>
