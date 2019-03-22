@@ -15,8 +15,13 @@
     <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
    
     <script type="text/javascript" src="js/conversation.js"></script>
-
-
+    <style>
+@media only screen and (max-width: 600px) {
+  .chat-popup {
+    max-width : 100%;
+  }
+}
+</style>
 </head>
 <body>
 <section>
