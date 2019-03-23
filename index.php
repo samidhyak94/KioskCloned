@@ -31,10 +31,10 @@
     <div class="form-container">
       <h1>AI CHATBOT</h1>
       <div id="response" class="response"></div>
-      <input id="input" class="input" placeholder="Type message.." type="text">
+      <input id="input" class="input" placeholder="Type message..." type="text">
       <button id="rec"><b class="fa fa-microphone">Voice</b></button>
       
-      <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+      <button type="button" class="btn cancel" onclick="closeForm()"><b>CLOSE</b></button>
     </div>
   </div>
 </section>
