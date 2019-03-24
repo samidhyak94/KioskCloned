@@ -24,7 +24,7 @@
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
   </div>
     <h1 class="quote"></h1>
-  <button class="open-button" onclick="openForm()">Have any query?<b>Ask iVAC Bot!</b></button>
+  <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC Bot!</b></button>
 
   <div class="chat-popup" id="myForm">
     
