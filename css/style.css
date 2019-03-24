@@ -120,9 +120,9 @@ section {
 }
 /* Set a style for the submit/send button */
 .form-container {
-  width: 100%;
-  max-width: 500px;
-  height: 600px;
+  width: 80%;
+  max-width: 300px;
+  height: 500px;
   padding: 10px 0 10px 0;
   background: #d52e2e;
  
