@@ -113,8 +113,8 @@ section {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 500px;
   z-index: 1;
   box-shadow: 0 0 10px 5px #2f2f2f;
 }
