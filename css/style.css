@@ -103,7 +103,7 @@ section {
  .open-button1 {
   display: block;
   position: fixed;
-  bottom: 14px;
+  bottom: 24px;
   left : 20px;
   -webkit-appearance: button;
   -moz-appearance: button;  
