@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +23,12 @@
     <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
   </div>
     <h1 class="quote"></h1>
-  <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC Bot!</b></button>
-  <button class="open-button1" onclick="openForm()"><b>Ask iVAC Booking Bot!</b></button>
+    <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC!</b></button>
+    <button class="open-button1" onclick="openForm()"><b>iVAC Booking Bot!</b></button>
+    <button class="open-button2" onclick="openForm()"><b>iVAC Certification Bot!</b></button>
+    <button class="open-button3" onclick="openForm()"><b>iVAC Latest Events Bot!</b></button>
+    <button class="open-button4" onclick="openForm()"><b>iVAC Upcoming Events Bot!</b></button>
+    <button class="open-button5" onclick="openForm()"><b>iVAC Appointment Bot!</b></button>
   <div class="chat-popup" id="myForm">
     
     <div class="form-container">
