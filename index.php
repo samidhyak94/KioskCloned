@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="G.I Labs">
     <meta name="author" content="GIL">
-
+ 
     <title>iVAC</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
   </div>
     <h1 class="quote"></h1>
   <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC Bot!</b></button>
-
+  <button class="open-button1" onclick="openForm()">Have a query?<b>Ask iVAC Bot!</b></button>
   <div class="chat-popup" id="myForm">
     
     <div class="form-container">
