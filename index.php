@@ -24,7 +24,7 @@
   </div>
     <h1 class="quote"></h1>
     <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC!</b></button>
-    <button class="open-button book" onclick="openForm()"><b>Booking Bot!</b></button>
+    <button class="open-button booking" onclick="openForm()"><b>Booking Bot!</b></button>
     <button class="open-button certification" onclick="openForm()"><b>Certification Bot!</b></button>
     <button class="open-button latest" onclick="openForm()"><b>Latest Events Bot!</b></button>
     <button class="open-button upcoming" onclick="openForm()"><b>Upcoming Events Bot!</b></button>
