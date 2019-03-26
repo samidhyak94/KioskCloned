@@ -21,6 +21,9 @@
         .open-button {
           width:100%;
         }
+          .quote {		
+25	          width: 100%;		
+26	        }
       }
     </style>
 
