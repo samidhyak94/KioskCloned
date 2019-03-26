@@ -51,7 +51,7 @@ section {
   display: block;
   position: fixed;    
 }
-  /For top left icon/
+  /*For top left icon*/
 
 .container .top .topleft {
     top: 8px;
@@ -207,7 +207,7 @@ section {
  
 }
 
-/Inpur area/
+/*Inpur area*/
 .form-container .input {
   width: 80%;
   height: 40px;
