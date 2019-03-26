@@ -24,11 +24,11 @@
   </div>
     <h1 class="quote"></h1>
     <button class="open-button" onclick="openForm()">Have a query?<b>Ask iVAC!</b></button>
-    <button class="open-button1" onclick="openForm()"><b>Booking Bot!</b></button>
-    <button class="open-button2" onclick="openForm()"><b>Certification Bot!</b></button>
-    <button class="open-button3" onclick="openForm()"><b>Latest Events Bot!</b></button>
-    <button class="open-button4" onclick="openForm()"><b>Upcoming Events Bot!</b></button>
-    <button class="open-button5" onclick="openForm()"><b>Appointment Bot!</b></button>
+    <button class="open-button book" onclick="openForm()"><b>Booking Bot!</b></button>
+    <button class="open-button certification" onclick="openForm()"><b>Certification Bot!</b></button>
+    <button class="open-button latest" onclick="openForm()"><b>Latest Events Bot!</b></button>
+    <button class="open-button upcoming" onclick="openForm()"><b>Upcoming Events Bot!</b></button>
+    <button class="open-button appointment" onclick="openForm()"><b>Appointment Bot!</b></button>
   <div class="chat-popup" id="myForm">
     
     <div class="form-container">
