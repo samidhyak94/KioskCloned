@@ -20,10 +20,14 @@
       @media screen and (max-width:800px) {
         .open-button {
           width:100%;
-         }
-         .quote {		
-          width:100%;		
-         }
+        }
+        .quote {
+          width: 100%;
+        }
+        .chat-popup {
+          width: 100%;
+          height: 100%;
+        }
       }
     </style>
 
