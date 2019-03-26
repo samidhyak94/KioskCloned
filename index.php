@@ -20,10 +20,10 @@
       @media screen and (max-width:800px) {
         .open-button {
           width:100%;
-        }
-          .quote {		
-25	          width: 100%;		
-26	        }
+         }
+         .quote {		
+          width: 100%;		
+         }
       }
     </style>
 
