@@ -283,7 +283,7 @@ section {
   display: none;
   position: fixed;
   bottom: 0;
-  left : 0;
+  right : 0;
   width: 400px;
   height: 600px;
   z-index: 1;
