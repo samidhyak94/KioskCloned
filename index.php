@@ -56,7 +56,7 @@
         <button class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
         <button class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
         <button class="open-button fl-rt" onclick="openForm()">EMERGENCY <b>BOT</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">ABOUT TECHNO INDIA GROUP <b>BOT</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">TECHNO INDIA GROUP <b>BOT</b></button>
       </div>
     </div> 
   
