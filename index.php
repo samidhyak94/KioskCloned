@@ -45,7 +45,7 @@
     </div>
     <div style="overflow: auto;">
       <div class="left-menu">
-        <button class="open-button" onclick="openForm()">Something <b>New1</b></button>
+        <button id ="1" class="open-button" onclick="openForm()">Something <b>New1</b></button>
         <button class="open-button" onclick="openForm()">Something <b>New2</b></button>  
         <button class="open-button" onclick="openForm()">Something <b>New3</b></button>
         <button class="open-button" onclick="openForm()">Something <b>New4</b></button>
