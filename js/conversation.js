@@ -15,6 +15,14 @@ var accessToken = "fb91d8987c274d568c656e7f4c71e000";
         switchRecognition();
         console.log("++SwitchRecognition() fired");  
       });
+        
+         $("#1").click(function(event) 
+      {
+        console.log("Button detected");  
+        setResponse("Welcome to the AI World");
+        console.log("++TEST REPLY");  
+      });
+        
     });
     var recognition;
     function startRecognition() {
