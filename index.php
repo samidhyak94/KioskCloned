@@ -45,18 +45,18 @@
     </div>
     <div style="overflow: auto;">
       <div class="left-menu">
-        <button id ="1" class="open-button" onclick="openForm()">Something <b>New1</b></button>
-        <button class="open-button" onclick="openForm()">Something <b>New2</b></button>  
-        <button class="open-button" onclick="openForm()">Something <b>New3</b></button>
-        <button class="open-button" onclick="openForm()">Something <b>New4</b></button>
-        <button class="open-button" onclick="openForm()">Something <b>New5</b></button>
+        <button id ="1" class="open-button" onclick="openForm()">ABOUT SNU <b>BOT</b></button>
+        <button class="open-button" onclick="openForm()">ADMISSION <b>BOT</b></button>  
+        <button class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
+        <button class="open-button" onclick="openForm()">FEES <b>BOT</b></button>
+        <button class="open-button" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
       </div>
       <div class="right-menu">
-        <button class="open-button fl-rt" onclick="openForm()">Have any query? <b>Ask AI Bot.</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">Something <b>New6</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">Something <b>New7</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">Something <b>New8</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">Something <b>New9</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">APPOINTMENT <b>BOT</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">EMERGENCY <b>BOT</b></button>
+        <button class="open-button fl-rt" onclick="openForm()">ABOUT TECHNO INDIA GROUP <b>BOT</b></button>
       </div>
     </div> 
   
