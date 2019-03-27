@@ -17,16 +17,12 @@
     <script type="text/javascript" src="js/conversation.js"></script>
 
     <style type="text/css">
-      @media screen and (max-width:800px) {
+      @media screen and (max-width:600px) {
         .open-button {
           width:100%;
         }
         .quote {
           width: 100%;
-        }
-        .chat-popup {
-          width: 100%;
-          height: 100%;
         }
       }
     </style>
@@ -45,18 +41,18 @@
     </div>
     <div style="overflow: auto;">
       <div class="left-menu">
-        <button id ="1" class="open-button" onclick="openForm()">ABOUT SNU <b>BOT</b></button>
-        <button class="open-button" onclick="openForm()">ADMISSION <b>BOT</b></button>  
-        <button class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
-        <button class="open-button" onclick="openForm()">FEES <b>BOT</b></button>
-        <button class="open-button" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
+        <button id="btn01" class="open-button" onclick="openForm()">ABOUT SNU <b>BOT</b></button>
+        <button id="btn02" class="open-button" onclick="openForm()">ADMISSION <b>BOT</b></button>  
+        <button id="btn03" class="open-button" onclick="openForm()">APPOINTMENT <b>BOT</b></button>
+        <button id="btn04" class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
+        <button id="btn05" class="open-button" onclick="openForm()">EMERGENCY <b>BOT</b></button>
       </div>
       <div class="right-menu">
-        <button class="open-button fl-rt" onclick="openForm()">APPOINTMENT <b>BOT</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">EMERGENCY <b>BOT</b></button>
-        <button class="open-button fl-rt" onclick="openForm()">TECHNO INDIA GROUP <b>BOT</b></button>
+        <button id="btn06" class="open-button fl-rt" onclick="openForm()">SAFETY & SECURITY <b>BOT</b></button>
+        <button id="btn07" class="open-button fl-rt" onclick="openForm()">AFFILIATIONS <b>BOT</b></button>
+        <button id="btn08" class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
+        <button id="btn09" class="open-button fl-rt" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
+        <button id="btn10" class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
       </div>
     </div> 
   
@@ -65,10 +61,10 @@
       <div class="form-container">
         <h1>AI CHATBOT</h1>
         <div id="response" class="response"></div>
-        <input id="input" class="input" placeholder="Type message.." type="text">
+        <input id="input" class="input" placeholder="Type message.." type="text" autofocus>
         <button id="rec"><b class="fa fa-microphone">Voice</b></button>
         
-        <button type="button" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
+        <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
       </div>
     </div>
   </div>
@@ -79,8 +75,28 @@ function openForm() {
 }
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
-  document.getElementById("response").innerHTML=" ";
+  document.getElementById('response').innerHTML = ' ';
 }
+</script>
+<script type="text/javascript">
+  //THIS FUNCTION REDIRECTS USER UPON INACTIVITY
+      (function() {
+      const idleDurationSecs = 5;    // X number of seconds
+      const redirectUrl = 'slideShow.html';  // Redirect idle users to this URL
+      let idleTimeout; // variable to hold the timeout, do not modify
+      const resetIdleTimeout = function() {
+          // Clears the existing timeout
+          if(idleTimeout) clearTimeout(idleTimeout);
+          // Set a new idle timeout to load the redirectUrl after idleDurationSecs
+          idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+      };
+      // Init on page load
+      resetIdleTimeout();
+      // Reset the idle timeout on any of the events listed below
+      ['click', 'touchstart', 'mousemove','keypress'].forEach(evt => 
+          document.addEventListener(evt, resetIdleTimeout, false)
+      );
+  })();
 </script>
 </body>
 </html>
