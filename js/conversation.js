@@ -13,43 +13,43 @@ var accessToken = "fb91d8987c274d568c656e7f4c71e000";
       
       $("#btn01").click(function(event) 
       {
-        setResponse("This BoT is for Button 01"); 
+        setResponse("Hi! I am the here to answer your queries related to Sister Nivedita University, it's history and establishment. Go ahead, type in your message."); 
       });
       $("#btn02").click(function(event) 
       {
-        setResponse("This BoT is for Button 02"); 
+        setResponse("Do you have a query related to the admission procedure? I can tell you about the entrance tests, fees, departments and scholarships. Go ahead, type in your question!"); 
       });
       $("#btn03").click(function(event) 
       {
-        setResponse("This BoT is for Button 03"); 
+        setResponse("I see you're looking for fees. Go ahead type in a message like 'Tell me the fees' or 'I want to know the fees structure' you can also mention the course name in the phrase."); 
       });
       $("#btn04").click(function(event) 
       {
-        setResponse("This BoT is for Button 04"); 
+        setResponse("Hello! Are you seeking information related to departments and courses? Go ahead, type in your message! I'm here to help you."); 
       });
       $("#btn05").click(function(event) 
       {
-        setResponse("This BoT is for Button 05"); 
+        setResponse("Is there an emergency?  I can tell you the contact details of nearest Fire Brigade, Hospital and Police Station. Please tell me How may I help you?"); 
       });
       $("#btn06").click(function(event) 
       {
-        setResponse("This BoT is for Button 06"); 
+        setResponse("Are you concerned with the safety & security of this University? Tell me how can I assist you?"); 
       });
       $("#btn07").click(function(event) 
       {
-        setResponse("This BoT is for Button 07"); 
+        setResponse("Want to know about your numerous affiliations like UGC & AICTE? Go ahead, ask me your question related to the various Government Recognitions we have received!"); 
       });
       $("#btn08").click(function(event) 
       {
-        setResponse("This BoT is for Button 08"); 
+        setResponse("Jaw Dropping! Yes that's how the placements of Techno India Group are. Want to know more? Ask me a question about companies, salary and placement statistics."); 
       });
       $("#btn09").click(function(event) 
       {
-        setResponse("This BoT is for Button 09"); 
+        setResponse("Curious about scholarships? I can help. Please ask me a question related to the scholarships."); 
       });
       $("#btn10").click(function(event) 
       {
-        setResponse("This BoT is for Button 10"); 
+        setResponse("Our campus has separate Training & Placement Cell (TPC) well supported by the Industry Institute Partnership Cell (IIPC). Some of the recruiters are TCS, Microsoft, Cognizant, Accenture, IBM, Wipro, Infosys, BSE, Cognizant Technology Solution, Thoughtworks, CISCO, and Mu Sigma. SNU’s Centre of Excellence will soon have collaborations with world renowned companies like Bosch, Google, ABB Robotics, etc. and entrepreneurship cells to mentor students for developing skills that would further help in linking them to venture capitalists and angel investors. If you still have any query related to Industry Collaboration and Partnerships, please type in your message."); 
       });
 
       $("#rec").click(function(event) 
