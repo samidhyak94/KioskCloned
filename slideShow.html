@@ -76,7 +76,7 @@
   </style>
 </head>
 
-<body onclick='window.location.href="index.php"'>
+<body onclick='window.location.href="test.php"'>
 
   <div class="marquee-text">
     <marquee behaviour = 'scroll' direction = 'left'><b>CLICK ANYWHERE TO BEGIN</b></marquee>
@@ -104,14 +104,14 @@
       <img src="css/images/new6.jpg" class="img-size">
     </div>   
               
-    <div class="mySlides fade">
+<!--    <div class="mySlides fade">
       <img src="css/images/new7.jpg" class="img-size">
     </div>
 
     <div class="mySlides fade">
       <img src="css/images/new8.jpg" class="img-size">
     </div>
-                
+-->                
   </div>
 
   <div style="text-align:center">
@@ -120,8 +120,9 @@
     <span class="dot"></span>
     <span class="dot"></span> 
     <span class="dot"></span> 
+<!--    <span class="dot"></span> 
     <span class="dot"></span> 
-    <span class="dot"></span> 
+  -->
   </div>
   
   <div style="display: none">
@@ -149,7 +150,7 @@
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
   }
 </script>
 
