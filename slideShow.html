@@ -85,31 +85,31 @@
   <div class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/bg8.jpg" class="img-size">
+      <img src="css/images/new1.jpg" class="img-size">
     </div>
 
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/bg4.jpg" class="img-size">
+      <img src="css/images/new2.jpg" class="img-size">
     </div>
 
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/bg10.jpg" class="img-size">
+      <img src="css/images/new3.jpg" class="img-size">
     </div>
       
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/bg12.jpg" class="img-size">
+      <img src="css/images/new4.jpg" class="img-size">
     </div>
 
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/pexels-photo-1166657.jpeg" class="img-size">
+      <img src="css/images/new6.jpg" class="img-size">
     </div>   
               
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/bg/book-shelves-books-colorful-5711.jpg" class="img-size">
+      <img src="css/images/new7.jpg" class="img-size">
     </div>
 
     <div class="mySlides fade">
-      <img src="https://snuniv.ac.in/assets/images/event/1553676974_Scan_thumb.jpg" class="img-size">
+      <img src="css/images/new8.jpg" class="img-size">
     </div>
                 
   </div>
@@ -123,40 +123,34 @@
     <span class="dot"></span> 
     <span class="dot"></span> 
   </div>
-   <div style="display: none">
-    <audio controls>
-      <script type="text/javascript">
-    console.log("audio-div-before");
-  </script>
-      <source src="sample.mp3" type="audio/mpeg">
-    </audio>  
+  
+  <div style="display: none">
+    <iframe src="sample.mp3" autoplay id="audio"></iframe>
+    <audio src="sample.mp3" type="audio/mp3" autoplay></audio>  
    <!-- <embed src="sample.mp3" autostart loop display = "none"></embed>  -->
-  <script type="text/javascript">
-    console.log("audio-div-later");
-  </script>
   </div>
 </body>
 
 <script type="text/javascript">
-var slideIndex = 0;
-showSlides();
+  var slideIndex = 0;
+  showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
 </script>
 
 
