@@ -36,23 +36,23 @@
         <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
       </div>
       <div class="quote">
-        <h1><s>ALEXA <s><s>SIRI <s> ? Meet SNU'S own Voice Bot</h1>
+        <marquee behaviour = 'scroll' direction = 'left'><s>ALEXA</s>? <s>SIRI</s>? <b>Meet SNU'S own AI assistant</b></marquee>
       </div>
     </div>
     <div style="overflow: auto;">
       <div class="left-menu">
         <button id="btn01" class="open-button" onclick="openForm()">ABOUT SNU <b>BOT</b></button>
         <button id="btn02" class="open-button" onclick="openForm()">ADMISSION <b>BOT</b></button>  
-        <button id="btn03" class="open-button" onclick="openForm()">AFFILIATIONS <b>BOT</b></button>
+        <button id="btn03" class="open-button" onclick="openForm()">FEES <b>BOT</b></button>
         <button id="btn04" class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
-        <button id="btn05" class="open-button" onclick="openForm()">FEES <b>BOT</b></button>
+        <button id="btn05" class="open-button" onclick="openForm()">EMERGENCY <b>BOT</b></button>
       </div>
       <div class="right-menu">
-        <button id="btn06" class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
-        <button id="btn07" class="open-button fl-rt" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
-        <button id="btn08" class="open-button fl-rt" onclick="openForm()">PLACEMENTS <b>BOT</b></button>
-        <button id="btn09" class="open-button fl-rt" onclick="openForm()">EMERGENCY <b>BOT</b></button>
-        <button id="btn10" class="open-button fl-rt" onclick="openForm()">SAFETY AND SECURITY <b>BOT</b></button>
+        <button id="btn06" class="open-button fl-rt" onclick="openForm()">SAFETY & SECURITY <b>BOT</b></button>
+        <button id="btn07" class="open-button fl-rt" onclick="openForm()">AFFILIATIONS <b>BOT</b></button>
+        <button id="btn08" class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
+        <button id="btn09" class="open-button fl-rt" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
+        <button id="btn10" class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
       </div>
     </div> 
   
@@ -81,7 +81,7 @@ function closeForm() {
 <script type="text/javascript">
   //THIS FUNCTION REDIRECTS USER UPON INACTIVITY
       (function() {
-      const idleDurationSecs = 5;    // X number of seconds
+      const idleDurationSecs = 150;    // X number of seconds
       const redirectUrl = 'slideShow.html';  // Redirect idle users to this URL
       let idleTimeout; // variable to hold the timeout, do not modify
       const resetIdleTimeout = function() {
