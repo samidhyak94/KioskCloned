@@ -36,7 +36,7 @@
         <img src="css/images/GILabs_logo.png" alt="G.I Labs" class="topleft">
       </div>
       <div class="quote">
-        <h1>Welcome to the world of AI</h1>
+        <h1><s>ALEXA <s><s>SIRI <S> ? Meet SNU'S own Voice Bot</h1>
       </div>
     </div>
     <div style="overflow: auto;">
