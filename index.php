@@ -61,7 +61,7 @@
       <div class="form-container">
         <h1>AI CHATBOT</h1>
         <div id="response" class="response"></div>
-        <input id="input" class="input" placeholder="Type message.." type="text" autofocus>
+        <input id="input" class="input" placeholder="Type message..." type="text" autofocus>
         <button id="rec"><b class="fa fa-microphone">Voice</b></button>
         
         <button type="button" id="closeButton" class="btn cancel" onclick="closeForm()"><b>Close</b></button>
@@ -72,6 +72,7 @@
 <script>
 function openForm() {
   document.getElementById("myForm").style.display = "block";
+  document.getElementById("input").focus() ;
 }
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
