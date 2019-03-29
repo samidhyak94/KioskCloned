@@ -46,7 +46,7 @@ section {
 
 .container .top {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 
 .container .top .logo {
@@ -92,6 +92,32 @@ section {
     content: "\f09b";
 }
 
+.mid-section {
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  padding: 15px;
+  font-size: 30px;
+  background-color: #F2F4F4;
+}
+
+.admission-form-button {
+  width: 200px;
+  border-radius: 0px;
+  font-size: 30px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  }
+
+.registration-form-button {
+  width: 200px;
+  border-radius: 0px;
+  font-size: 30px;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
 .container .left-menu {
   width: 50%;
   padding: 20px;
@@ -108,9 +134,10 @@ section {
   .open-button {
   display: block;
   position: relative;
+  right: 5px;
   -webkit-appearance: button;
   -moz-appearance: button;  
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: #ee0606;
   border: none;
   color: #FFFFFF;
@@ -141,6 +168,27 @@ section {
   right: -20px;
   transition: 0.5s;
 }
+
+
+.glow {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
 .button:hover span {
   background-color: #2ECC71;
   padding-right: 30px;
@@ -154,6 +202,7 @@ section {
   float: right;
 }
 
+
 /* The popup chat - hidden by default */
 .chat-popup {
   display: none;
@@ -163,6 +212,7 @@ section {
   width: 100%;
   height: 600px;
   border: 2px;
+  background-color: white;
   z-index: 1;
   box-shadow: 0 0 10px 5px #2f2f2f;
 }
@@ -262,7 +312,7 @@ section {
 }
 
 
-.form-container  .btn {
+.btn {
   width: 100%;
   height: 40px;
   text-align: center;
@@ -282,6 +332,8 @@ section {
   opacity: 1;
   
 }
+
+
 
 /*CSS for chatbot */
 {box-sizing: border-box;}
