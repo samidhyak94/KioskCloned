@@ -39,10 +39,14 @@
         <marquee behaviour = 'scroll' direction = 'left'><s>ALEXA</s>? <s>SIRI</s>? <b>Meet SNU'S own AI assistant</b></marquee>
       </div>
     </div>
+    <div class="mid-section">
+      <button class=" admission-form-button" onclick="displayIframe()"><span class="">Admission</span></button>
+      <button class=" registration-form-button fl-rt" onclick="displayRegForm()"><span class="">Registration</span></button>
+    </div>
     <div style="overflow: auto;">
       <div class="left-menu">
         <button id="btn01" class="open-button" onclick="openForm()">ABOUT SNU <b>BOT</b></button>
-        <button id="btn02" class="open-button" onclick="openForm()">ADMISSION <b>BOT</b></button>  
+        <button id="btn02" class="open-button bg-drk-red" onclick="openForm()">ADMISSION <b>BOT</b></button>  
         <button id="btn03" class="open-button" onclick="openForm()">FEES <b>BOT</b></button>
         <button id="btn04" class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
         <button id="btn05" class="open-button" onclick="openForm()">EMERGENCY <b>BOT</b></button>
@@ -55,7 +59,20 @@
         <button id="btn10" class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
       </div>
     </div> 
-  
+    
+    <!--This is the division for application form which is initially hidden untill onclick="displayForm()" place it above the chat-popup class-->
+    <div id="frame" class="chat-popup">
+          <h1>Fill this application form for admission in SNU</h1>
+          <iframe src="https://snuniv.ac.in/index.php/master/snumat" height=87% width=100%></iframe>
+          <button type="button" id="closeButton" class="btn cancel" onclick="closeFrame()"><b>Close</b></button>
+    </div>
+    <!-- Registration form -->
+    <div id="registration-form" class="chat-popup">
+      <h1>Fill this registration form</h1>
+      <iframe src="registration-form.php" height=87% width=100%></iframe>
+      <button type="button" id="closeButton" class="btn cancel" onclick="closeRegForm()"><b>Close</b></button>
+    </div>
+
     <div class="chat-popup" id="myForm">
       
       <div class="form-container">
@@ -70,14 +87,38 @@
   </div>
 </section>
 <script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-  document.getElementById("input").focus() ;
-}
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-  document.getElementById('response').innerHTML = ' ';
-}
+  // for dsiplaying the chatbox
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+    document.getElementById("input").focus() ;
+  }
+  // for closing the chatbox
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+    document.getElementById('response').innerHTML = ' ';
+  }
+
+  // for displaying the form
+  function displayIframe() {
+          document.getElementById("frame").style.display = "block";
+          document.getElementByClassName("open-button").style.display = "block";
+      }
+  //for closing the form
+  function closeFrame() {
+    document.getElementById("frame").style.display = "none";
+    document.getElementByClassName("open-button").style.display = "none";
+  }
+  // for displaying the form
+  function displayRegForm() {
+          document.getElementById("registration-form").style.display = "block";
+          document.getElementByClassName("open-button").style.display = "block";
+      }
+  //for closing the form
+  function closeRegForm() {
+    document.getElementById("registration-form").style.display = "none";
+    document.getElementByClassName("open-button").style.display = "none";
+  }
+
 </script>
 <script type="text/javascript">
   //THIS FUNCTION REDIRECTS USER UPON INACTIVITY
