@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="G.I Labs">
     <meta name="author" content="GIL">
-
     
     <title>iVAC</title>
     <link rel="stylesheet" href="css/style.css">
@@ -25,9 +24,7 @@
         .quote {
           width: 100%;
         }
-         .chat_img { 
-position: fixed; right: 50px; bottom: 60px; width: 250px; height: 250px; }
-
+        
       }
     </style>
 
