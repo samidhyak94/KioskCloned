@@ -9,6 +9,8 @@
     <meta name="description" content="G.I Labs">
     <meta name="author" content="GIL">
 
+    <img class="chat_img" src="css/images/query_logo.png"> 
+    
     <title>iVAC</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
