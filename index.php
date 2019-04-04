@@ -64,13 +64,13 @@
         <button id="btn04" class="open-button" onclick="openForm()">COURSES <b>BOT</b></button>
         <button id="btn05" class="open-button" onclick="openForm()">EMERGENCY <b>BOT</b></button>
       </div>
-      <div class="right-menu">
+     <!-- <div class="right-menu">
         <button id="btn06" class="open-button fl-rt" onclick="openForm()">SAFETY & SECURITY <b>BOT</b></button>
         <button id="btn07" class="open-button fl-rt" onclick="openForm()">AFFILIATIONS <b>BOT</b></button>
         <button id="btn08" class="open-button fl-rt" onclick="openForm()">PLACEMENT <b>BOT</b></button>
         <button id="btn09" class="open-button fl-rt" onclick="openForm()">SCHOLARSHIP <b>BOT</b></button>
         <button id="btn10" class="open-button fl-rt" onclick="openForm()">INDUSTRY COLLABORATION <b>BOT</b></button>
-      </div>
+      </div>-->
     </div> 
     
     <!--This is the division for application form which is initially hidden untill onclick="displayForm()" place it above the chat-popup class-->
