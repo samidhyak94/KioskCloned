@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <img class="chat_img" src="css/images/query_logo.png"> 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta id="apple-mobile-web-app-capable" name="apple-mobile-web-app-capable" content="yes" > 
