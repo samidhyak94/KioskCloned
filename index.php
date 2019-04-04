@@ -26,6 +26,9 @@
         .quote {
           width: 100%;
         }
+         .chat_img { 
+position: fixed; right: 50px; bottom: 60px; width: 250px; height: 250px; }
+
       }
     </style>
 
