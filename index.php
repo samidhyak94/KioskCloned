@@ -31,14 +31,13 @@
    <script type="text/javascript">
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
     (function(d, m){
-      var kommunicateSettings = {"appId":"389c770bf14d9d241f571b2f6d6655b0a","conversationTitle":"Sister Nivedita University"};
+      var kommunicateSettings = {"appId":"16c3efad7b70ff3519d6431f6865e7e50","conversationTitle":"GILabs "};
       var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
       s.src = "https://api.kommunicate.io/v2/kommunicate.app";
       var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
       window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
-</script> 
-
+</script>
     
 </head>
 <body>
