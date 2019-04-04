@@ -9,7 +9,6 @@
     <meta name="description" content="G.I Labs">
     <meta name="author" content="GIL">
 
-    <img class="chat_img" src="css/images/query_logo.png"> 
     
     <title>iVAC</title>
     <link rel="stylesheet" href="css/style.css">
@@ -47,6 +46,7 @@ position: fixed; right: 50px; bottom: 60px; width: 250px; height: 250px; }
 </head>
 <body>
 <section>
+    <img class="chat_img" src="css/images/query_logo.png"> 
   <div class="container">
     <div class="top">
       <div class="logo">
