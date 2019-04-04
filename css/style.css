@@ -37,6 +37,8 @@ h1, h2, h3 {
 section {
   margin: 1.5em auto;
 }
+ .chat_img { 
+position: fixed; right: 50px; bottom: 60px; width: 250px; height: 250px; }
 
 .container {
   width: 100%;
